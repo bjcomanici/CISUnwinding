@@ -21,6 +21,7 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\LocationAndSen
 
 #Enable Windows Store
 Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore" -Name "RemoveWindowsStore" -ErrorAction SilentlyContinue
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore" -Name "RemoveWindowsStore" -Value 0 -PropertyType DWORD -Force
 
 #Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\WindowsStore" -Name "RemoveWindowsStore" -Value 0 -Force
 
